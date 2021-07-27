@@ -1,0 +1,5 @@
+db:
+  host:     "postgres.finance.svc.k8s.dldevel"
+  port:     "5432"
+  dbname:   "employees"
+  sslmode:  "disable"
