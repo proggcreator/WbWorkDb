@@ -23,5 +23,3 @@ func New() *Config {
 		Password: getEnv("Password", ""),
 	}
 }
-
-// Simple helper function to read an environment or return a default value

@@ -76,8 +76,8 @@ func PostDoSmt(db *sqlx.DB, m Message) (jsonString []byte, err error) {
 
 //определение кода ошибки
 func DefTypeError(i int) (coderet string) {
-	//if (i%50 == 0) || (i > 50000) {
-	if i == 50000 {
+
+	if (i%50000 == 0) || (i > 50000) {
 		coderet = "400"
 	} else {
 		coderet = "500"
@@ -123,7 +123,7 @@ func task1_example(db *sqlx.DB) {
 	fmt.Println(x) //возвращаемое значение
 }
 func task2_example(db *sqlx.DB) {
-	id := 2
+	id := 1
 	errcode, err := MyGetError(db, id)
 	if err != nil {
 		fmt.Println(err)     //вывод типа ошибки
